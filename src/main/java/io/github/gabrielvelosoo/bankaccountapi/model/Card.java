@@ -17,11 +17,11 @@ import java.time.LocalDateTime;
 public class Card implements Serializable {
 
     @Id
-    @Column(name = "id", nullable = false)
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "number", length = 16, nullable = false, unique = true)
+    @Column(name = "number", length = 19, nullable = false, unique = true)
     private String number;
 
     @Column(name = "available_limit", precision = 13, scale = 2, nullable = false)
