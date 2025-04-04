@@ -1,5 +1,7 @@
 package io.github.gabrielvelosoo.bankaccountapi;
 
+import io.swagger.v3.oas.annotations.OpenAPIDefinition;
+import io.swagger.v3.oas.annotations.servers.Server;
 import org.springframework.boot.Banner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -8,6 +10,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
+@OpenAPIDefinition(servers = { @Server(url = "/", description = "Default Server URL") })
 @EnableJpaAuditing
 public class Application {
 
