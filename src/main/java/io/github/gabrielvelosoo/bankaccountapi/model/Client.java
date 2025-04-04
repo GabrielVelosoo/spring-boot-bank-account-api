@@ -27,7 +27,7 @@ public class Client implements Serializable {
     @OneToOne(cascade = CascadeType.ALL)
     private Account account;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Card> cards;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
